@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIASS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           VALIASS BLOGSPOT THEME
+           Color Scheme: Maroon, Gold, Cream
+           ============================================ */
+
+        /* Root Variables */
+        :root {
+          --primary-maroon: #8B1538;
+          --dark-maroon: #6B0F2B;
+          --accent-gold: #FFD700;
+          --soft-gold: #F4A460;
+          --cream: #FFF8F0;
+          --light-cream: #F5E6D3;
+          --lavender: #E6D5E0;
+          --peach: #F5E6D3;
+          --tan: #D4A574;
+          --brown: #8B4513;
+          --white: #FFFFFF;
+          --text-dark: #2C2C2C;
+          --text-light: #666666;
+        }
+
+        /* Reset and Base Styles */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          font-family: 'Poppins', sans-serif;
+          color: var(--text-dark);
+          line-height: 1.6;
+          background-color: var(--cream);
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        /* ============================================
+           HEADER & NAVIGATION
+           ============================================ */
+
+        .header {
+          background-color: var(--white);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
+
+        .navbar {
+          padding: 1rem 0;
+        }
+
+        .nav-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .logo {
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: var(--primary-maroon);
+          font-family: 'Playfair Display', serif;
+          letter-spacing: 1px;
+        }
+
+        .nav-menu {
+          display: flex;
+          list-style: none;
+          gap: 2rem;
+        }
+
+        .nav-menu a {
+          text-decoration: none;
+          color: var(--text-dark);
+          font-weight: 500;
+          transition: color 0.3s ease;
+          border-bottom: 2px solid transparent;
+          padding-bottom: 0.25rem;
+        }
+
+        .nav-menu a:hover {
+          color: var(--primary-maroon);
+          border-bottom-color: var(--accent-gold);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+
+        .hero {
+          background: linear-gradient(135deg, var(--dark-maroon) 0%, var(--primary-maroon) 50%, #5a0a1f 100%);
+          padding: 4rem 0;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: 
+            radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(244, 164, 96, 0.1) 0%, transparent 50%);
+          pointer-events: none;
+        }
+
+        .hero-content {
+          position: relative;
+          z-index: 1;
+        }
+
+        .hero-box {
+          background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+          border: 3px solid var(--soft-gold);
+          border-radius: 20px;
+          padding: 3rem 2rem;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        .hero-text-left {
+          flex: 1;
+          text-align: center;
+        }
+
+        .hero-text-left h1 {
+          font-size: 2.5rem;
+          color: var(--white);
+          margin: 0.5rem 0;
+          font-family: 'Playfair Display', serif;
+          font-weight: 700;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-text-left p {
+          font-size: 1.1rem;
+          color: var(--accent-gold);
+          font-weight: 500;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+          margin-top: 1rem;
+        }
+
+        .hero-symbol {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 2rem;
+        }
+
+        .logo-container {
+          position: relative;
+          width: 360px;
+          height: 360px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .logo-circle-wrapper {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, rgba(244, 164, 96, 0.1) 100%);
+          border: 4px solid var(--soft-gold);
+          box-shadow: 
+            0 0 0 2px var(--primary-maroon),
+            0 10px 40px rgba(0, 0, 0, 0.4),
+            inset 0 2px 8px rgba(255, 255, 255, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 8px;
+        }
+
+        .logo-image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 50%;
+          display: block;
+        }
+
+        /* ============================================
+           SECTION HEADERS
+           ============================================ */
+
+        .section-header {
+          text-align: center;
+          margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+          font-size: 2.2rem;
+          color: var(--primary-maroon);
+          font-family: 'Playfair Display', serif;
+          margin-bottom: 1rem;
+          font-weight: 700;
+        }
+
+        .section-header p {
+          color: var(--text-light);
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .decorative-divider {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+        }
+
+        .decorative-divider span {
+          display: block;
+          height: 2px;
+          width: 60px;
+          background: linear-gradient(to right, transparent, var(--primary-maroon), transparent);
+        }
+
+        .divider-icon {
+          font-size: 1.5rem;
+          color: var(--primary-maroon);
+          width: auto !important;
+          height: auto !important;
+          background: none !important;
+        }
+
+        /* ============================================
+           BLOG CATEGORIES SECTION
+           ============================================ */
+
+        .blog-categories {
+          background-color: var(--cream);
+          padding: 4rem 0;
+        }
+
+        .categories-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          margin-top: 2rem;
+        }
+
+        .category-card {
+          border-radius: 15px;
+          padding: 2rem;
+          text-align: center;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
+          color: inherit;
+          cursor: pointer;
+        }
+
+        .category-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-lavender {
+          background-color: #E6D5E0;
+        }
+
+        .card-peach {
+          background-color: #FFE8D6;
+        }
+
+        .card-cream {
+          background-color: #FFFBF0;
+        }
+
+        .card-gold {
+          background-color: #F4E4C1;
+        }
+
+        .category-icon {
+          width: 60px;
+          height: 60px;
+          margin: 0 auto 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
+        }
+
+        .category-card h3 {
+          font-size: 1.3rem;
+          color: var(--text-dark);
+          margin-bottom: 0.5rem;
+          font-family: 'Playfair Display', serif;
+          font-weight: 600;
+        }
+
+        .category-count {
+          color: var(--primary-maroon);
+          font-size: 0.9rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .category-card p {
+          color: var(--text-light);
+          margin-bottom: 1.5rem;
+          flex-grow: 1;
+          font-size: 0.9rem;
+        }
+
+        .btn-read-posts {
+          padding: 0.6rem 1.5rem;
+          background-color: var(--primary-maroon);
+          color: var(--white);
+          border: none;
+          border-radius: 25px;
+          cursor: pointer;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          font-size: 0.9rem;
+          text-decoration: none;
+          display: inline-block;
+        }
+
+        .btn-read-posts:hover {
+          background-color: var(--dark-maroon);
+          box-shadow: 0 5px 15px rgba(139, 21, 56, 0.3);
+        }
+
+        /* ============================================
+           LATEST POSTS SECTION
+           ============================================ */
+
+        .latest-posts {
+          background-color: #F5E6D3;
+          padding: 4rem 0;
+        }
+
+        .posts-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          gap: 3rem;
+          align-items: start;
+        }
+
+        .posts-info {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .posts-info h2 {
+          font-size: 2rem;
+          color: var(--text-dark);
+          font-family: 'Playfair Display', serif;
+          margin-bottom: 0.5rem;
+        }
+
+        .posts-info h2 span {
+          color: var(--primary-maroon);
+        }
+
+        .posts-info h3 {
+          font-size: 1.5rem;
+          color: var(--primary-maroon);
+          margin-bottom: 1rem;
+          font-family: 'Playfair Display', serif;
+        }
+
+        .posts-info p {
+          color: var(--text-light);
+          margin-bottom: 2rem;
+        }
+
+        .posts-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+        }
+
+        .post-card {
+          background-color: var(--white);
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+          text-decoration: none;
+          color: inherit;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .post-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .post-image {
+          width: 100%;
+          height: 150px;
+          background: linear-gradient(135deg, var(--primary-maroon), var(--soft-gold));
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 3rem;
+          overflow: hidden;
+        }
+
+        .post-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .post-info {
+          padding: 1rem;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .post-date {
+          font-size: 0.8rem;
+          color: var(--primary-maroon);
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+        }
+
+        .post-card h4 {
+          font-size: 1rem;
+          color: var(--text-dark);
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+
+        .post-excerpt {
+          font-size: 0.85rem;
+          color: var(--text-light);
+          flex-grow: 1;
+        }
+
+        .read-more {
+          color: var(--primary-maroon);
+          font-weight: 600;
+          text-decoration: none;
+          margin-top: 0.5rem;
+          font-size: 0.85rem;
+        }
+
+        .read-more:hover {
+          text-decoration: underline;
+        }
+
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+
+        .about {
+          background-color: var(--cream);
+          padding: 4rem 0;
+        }
+
+        .about-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+          align-items: center;
+        }
+
+        .about-content h2 {
+          font-size: 2rem;
+          color: var(--primary-maroon);
+          margin-bottom: 1rem;
+          font-family: 'Playfair Display', serif;
+        }
+
+        .about-content p {
+          color: var(--text-light);
+          margin-bottom: 1rem;
+          line-height: 1.8;
+        }
+
+        .about-list {
+          list-style: none;
+          margin: 1.5rem 0;
+        }
+
+        .about-list li {
+          color: var(--text-light);
+          margin-bottom: 0.8rem;
+          padding-left: 1.5rem;
+          position: relative;
+        }
+
+        .about-list li::before {
+          content: '✦';
+          position: absolute;
+          left: 0;
+          color: var(--primary-maroon);
+          font-weight: bold;
+        }
+
+        .about-image {
+          background: linear-gradient(135deg, var(--primary-maroon), var(--soft-gold));
+          border-radius: 15px;
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+
+        /* ============================================
+           TEAM SECTION
+           ============================================ */
+
+        .team {
+          background-color: var(--cream);
+          padding: 4rem 0;
+        }
+
+        .team-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 2rem;
+          margin-top: 2rem;
+          background-color: #E8B44F;
+          padding: 2rem;
+          border-radius: 10px;
+        }
+
+        .team-member {
+          text-align: center;
+          color: var(--text-dark);
+        }
+
+        .member-image {
+          width: 120px;
+          height: 120px;
+          margin: 0 auto 1rem;
+          border-radius: 50%;
+          overflow: hidden;
+          background-color: var(--white);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .member-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .team-member h3 {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+          font-size: 0.85rem;
+          color: var(--text-light);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+
+        .footer {
+          background-color: var(--primary-maroon);
+          color: var(--white);
+        }
+
+        .footer-top {
+          background-color: #E8B44F;
+          padding: 2rem 0;
+          color: var(--text-dark);
+        }
+
+        .footer-top .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 3rem;
+        }
+
+        .newsletter,
+        .social-links {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .newsletter-section {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .newsletter-icon {
+          font-size: 1.5rem;
+        }
+
+        .newsletter-section h3 {
+          font-size: 1rem;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        .newsletter-form {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .newsletter-form input {
+          padding: 0.6rem 1rem;
+          border: none;
+          border-radius: 25px;
+          min-width: 200px;
+        }
+
+        .btn-subscribe {
+          background-color: var(--primary-maroon);
+          color: var(--white);
+          border: none;
+          padding: 0.6rem 1rem;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background-color 0.3s ease;
+        }
+
+        .btn-subscribe:hover {
+          background-color: var(--dark-maroon);
+        }
+
+        .social-links {
+          gap: 1.5rem;
+        }
+
+        .social-link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background-color: #222;
+          border-radius: 50%;
+          color: var(--white);
+          text-decoration: none;
+          font-size: 1.2rem;
+          transition: background-color 0.3s ease;
+        }
+
+        .social-link:hover {
+          background-color: var(--primary-maroon);
+        }
+
+        .footer-links {
+          background-color: var(--primary-maroon);
+          padding: 2rem 0;
+          border-top: 2px solid #A01A45;
+        }
+
+        .footer-columns {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 2rem;
+        }
+
+        .footer-col h4 {
+          font-size: 0.95rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .footer-col ul {
+          list-style: none;
+        }
+
+        .footer-col ul li {
+          margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+          color: #FFD7E1;
+          text-decoration: none;
+          font-size: 0.85rem;
+          transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+          color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+          background-color: var(--dark-maroon);
+          padding: 1.5rem 0;
+          text-align: center;
+          font-size: 0.85rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+
+        @media (max-width: 768px) {
+          .nav-menu {
+            gap: 1rem;
+          }
+
+          .hero-box {
+            flex-direction: column;
+            gap: 2rem;
+          }
+
+          .hero-text-left h1 {
+            font-size: 1.5rem;
+          }
+
+          .logo-container {
+            width: 140px;
+            height: 140px;
+          }
+
+          .categories-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .posts-wrapper {
+            grid-template-columns: 1fr;
+          }
+
+          .posts-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .about-wrapper {
+            grid-template-columns: 1fr;
+          }
+
+          .team-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .footer-top .container {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .footer-columns {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 480px) {
+          .section-header h2 {
+            font-size: 1.5rem;
+          }
+
+          .categories-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .posts-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .team-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .footer-columns {
+            grid-template-columns: 1fr;
+          }
+
+          .nav-menu {
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+          }
+
+          .hero-text-left h1 {
+            font-size: 1.2rem;
+          }
+
+          .logo-container {
+            width: 120px;
+            height: 120px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">VALIASS INITIATIVES</div>
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#latest">Latest Posts</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-box">
+                <div class="hero-text-left">
+                    <h1>Welcome to VALIASS</h1>
+                    <h1></h1>
+                    <p>Insipred by Tradition, Driven by Innovation</p>
+                </div>
+                <div class="hero-symbol">
+                    <div class="logo-container">
+                        <div class="logo-circle-wrapper">
+                            <!-- Replace the src below with your logo image URL -->
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgo7oFtStEOeiJ9T69kDNkAvWrNc_vkAAeKNqPBfdsj4jQZltymh4PLXy4BvH1St3YxYFUN6SVTq9rDSUnrle-RIcbKHZ_RhUc5fnYyhgBxOgLrOLTIr4-yihJLOlKT1pc9YfZkXEcZY91_E9BTh-2IYPNA7eT9xYJLiTX3itqsAy0/s1600/VALIASS-official-logo.jpeg" alt="VALIASS Logo" class="logo-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories Section -->
+    <section class="blog-categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Blog Categories</h2>
+                <p>Discover inspiring content across different topics</p>
+                <div class="decorative-divider">
+                    <span></span>
+                    <span class="divider-icon">✦</span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Category 1 -->
+                <a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html" class="category-card card-lavender">
+                    <div class="category-icon">🕉️</div>
+                    <h3>Spirituality</h3>
+                    <p class="category-count">Explore spiritual practices</p>
+                    <p>Deep insights into spiritual wisdom and personal growth</p>
+                    <button class="btn-read-posts">Explore More</button>
+                </a>
+
+                <!-- Category 2 -->
+                <a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html" class="category-card card-peach">
+                    <div class="category-icon">🧑‍🎓</div>
+                    <h3>Career & Guidance</h3>
+                    <p class="category-count">Build your future</p>
+                    <p>Connecting expertise, innovative ideas, and business solutions to help individuals and businesses grow</p>
+                    <button class="btn-read-posts">Explore More</button>
+                </a>
+
+                <!-- Category 3 -->
+                <a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html" class="category-card card-lavender">
+                    <div class="category-icon">🎭</div>
+                    <h3>Consultancy & Business</h3>
+                    <p class="category-count">Enjoy life to the fullest</p>
+                    <p>Bringing communities together through culture, creativity, and fun</p>
+                    <button class="btn-read-posts">Explore More</button>
+                </a>
+
+                <!-- Category 4 -->
+                <a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html" class="category-card card-cream">
+                    <div class="category-icon">💆</div>
+                    <h3>Wellness</h3>
+                    <p class="category-count">Health and balance</p>
+                    <p>Holistic wellness and lifestyle tips</p>
+                    <button class="btn-read-posts">Explore More</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts Section -->
+    <section class="latest-posts" id="latest">
+        <div class="container">
+            <div class="posts-wrapper">
+                <div class="posts-info">
+                    <h2>Latest <span>Posts</span></h2>
+                    <h3>From VALIASS</h3>
+                    <p>Stay updated with our newest spiritual insights and wellness tips</p>
+                    <a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html" class="btn-read-posts">View All Posts</a>
+                </div>
+
+                <div class="posts-grid">
+                    <a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html" class="post-card">
+                        <div class="post-image">📖</div>
+                        <div class="post-info">
+                            <p class="post-date">Recent Post</p>
+                            <h4>Spirituality Guide</h4>
+                            <p class="post-excerpt">Discover the foundations of spiritual practice</p>
+                            <span class="read-more">Read More →</span>
+                        </div>
+                    </a>
+
+                    <a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html" class="post-card">
+                        <div class="post-image">🙏</div>
+                        <div class="post-info">
+                            <p class="post-date">Recent Post</p>
+                            <h4>Daily Wellness</h4>
+                            <p class="post-excerpt">Tips for a healthier and balanced life</p>
+                            <span class="read-more">Read More →</span>
+                        </div>
+                    </a>
+
+                    <a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html" class="post-card">
+                        <div class="post-image">✨</div>
+                        <div class="post-info">
+                            <p class="post-date">Recent Post</p>
+                            <h4>Job Updates</h4>
+                            <p class="post-excerpt">Explore what is happening int he public and private job market</p>
+                            <span class="read-more">Read More →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About VALIASS INITIATIVES</h2>
+                <div class="decorative-divider">
+                    <span></span>
+                    <span class="divider-icon">✦</span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="about-wrapper">
+                <div class="about-content">
+                    <h2>Our Mission</h2>
+                    <p>VALIASS is a vision-driven platform that creates impactful programs to guide and empower people across different walks of life.</p>
+                    <p>It is built on the idea of merging ancient wisdom with modern innovation — where mythology inspires purpose and technology shapes the future.</p>
+                    <p>VALIASS is not confined to a single domain — it is a dynamic platform that evolves with the changing needs of society.</p>
+                    <p>Wherever a new idea is required for a better tomorrow, VALIASS designs programs that address those needs with innovation and impact.</p>
+                    <ul class="about-list">
+                        <li>Authentic spiritual content and insights</li>
+                        <li>Skill-building and learning strategies</li>
+                        <li>Interview preparation and professional tips</li>
+                        <li>Simple and effective wellness practices</li>
+                        <li>Community engagement and support</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggiouxHurtotmdUUJ6SIvNVu8PnxNY3m9W6Zs9nXS05Lf4VmtIKx_KfOfJOJLwXaALxtdeVDfUwKN_tkfwh8GOK3xpUf3vYoMcA1kvX_VVfng8x6HVlXf8FFqHG3nDhQd8vlytAMDVUo0fKR6cCnlNqQdopQiYFYVkIBvX_oM_1yY/s1600/VALIASS-official-branding%20with%20logo.png" alt="VALIASS Initiatives">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team/Leadership Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Team</h2>
+                <div class="decorative-divider">
+                    <span></span>
+                    <span class="divider-icon">✦</span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkmIFrl9i3ZLVH55fIYEuHrUguflUyrDhwJ1DgDgnXYfRG_bb2re0Mg3gNS8XJQHgu8etGzlvww4fXzYt-lPV8ygk8Ljjly-CF6EHCwL_JPq24_vdNN-1pt1HzcaGRUDnGwbCqlFutqbA0iAgaYY18T04ZBh7xurYog7doMGBUfL4/s1600/Decision%20Lead-%20Head%20of%20operation.jpg" alt="Venkat">
+                    </div>
+                    <h3>Venkat</h3>
+                    <p>Cofounder</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguvdeXEsFs64UZq4VG9t-We_EVLQU_fLo_X_fg7j0KenzNuvGql-uqB7nbQL-X_pBElIZby5v9Ivy3WoYBLJ0tHFcgfgmdH3kjCU4CAshu9dh9sCgXcDv1Owix76oPgOMlmZuqDrjoN5SzZt2mT_l6nj0EQ5NsYaLu94jmJYG_u80/s1600/Operations%20Lead%20-%20Executive%20partner.jpg" alt="Surendra">
+                    </div>
+                    <h3>Surendra</h3>
+                    <p>Cofounder</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEid0qdvKNkZE715ZmlrybK7Qe1n5ro-zNvrO8kX-oFUPw9EG644z-OVHN3i4e2nxTkAkFPC-TnxtYcNEEpkrHG61JH30ChvUVbUddtWZjLQQbMzvEr3eHy7t_gz9owsG-ssQHctdnXenUSgOM26EPjR7D2932jbfkUJvhNVCBWg8IQ/s1600/Wallpaper.png" alt="Creative & Content Designer">
+                    </div>
+                    <h3>To Be Appointed</h3>
+                    <p>TBC</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEid0qdvKNkZE715ZmlrybK7Qe1n5ro-zNvrO8kX-oFUPw9EG644z-OVHN3i4e2nxTkAkFPC-TnxtYcNEEpkrHG61JH30ChvUVbUddtWZjLQQbMzvEr3eHy7t_gz9owsG-ssQHctdnXenUSgOM26EPjR7D2932jbfkUJvhNVCBWg8IQ/s1600/Wallpaper.png" alt="Content & Community Support">
+                    </div>
+                    <h3>To Be Appointed</h3>
+                    <p>TBC</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer Top - Newsletter & Social -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="newsletter">
+                    <div class="newsletter-section">
+                        <div class="newsletter-icon">📧</div>
+                        <h3>Subscribe to Our Newsletter</h3>
+                    </div>
+                    <form class="newsletter-form" action="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html" method="post">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-subscribe">→</button>
+                    </form>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/valiassinitiatives" class="social-link" title="LinkedIn">in</a>
+                    <a href="https://www.instagram.com/corporate_seema_lo_kalapipaasi" class="social-link" title="CSKP-Instagram">📷</a>
+                    <a href="https://www.instagram.com/valiassinitiatives" class="social-link" title="VALIASS-Instagram">📷</a>
+                    <a href="https://youtube.com/@corporate_seema_lo_kalaapipasi" class="social-link" title="CSKP-YouTube">📺</a>
+                    <a href="https://www.youtube.com/@valiass" class="social-link" title="VALIASS-YouTube">📺</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="https://www.blogger.com/search/label/Spirituality">Spirituality</a></li>
+                            <li><a href="https://www.blogger.com/search/label/Traditions">Career & Guidance</a></li>
+                            <li><a href="https://www.blogger.com/search/label/Meditation">Fun & Recreation</a></li>
+                            <li><a href="https://www.blogger.com/search/label/Wellness">Wellness</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Popular Posts</h4>
+                        <ul>
+                            <li><a href="https://www.blogger.com/">Spirituality Guide</a></li>
+                            <li><a href="https://www.blogger.com/">Daily Wellness</a></li>
+                            <li><a href="https://www.blogger.com/">Job Updates</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#categories">Categories</a></li>
+                            <li><a href="#latest">Latest Posts</a></li>
+                            <li><a href="#about">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:team.valiass@gmail.com">team.valiass@gmail.com</a></li>
+                            <li><a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html">Contact Form</a></li>
+                            <li><a href="https://valiass-posts.blogspot.com/p/under-construction-valiass-initiatives.html">Feedback</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 VALIASS INITIATIVES. All rights reserved. | <a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+</html>
